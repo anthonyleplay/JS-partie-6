@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>JS partie 6 exo 1</title>
+
+</head>
+
+
+<body class="bg-dark">
+    <div class="container bg-dark py-2">
+        <div class="row bg-light py-5 justify-content-center">
+            <div class="col-10">
+
+                <p class="h2">Partie 6 - Les boucles</p>
+
+                <p class="h4"> Exercice 1 Devoir</p>
+                <p>
+
+                    A l'aide d'une boucle, afficher toutes les années entre 2020 et 2030. Colorer en rouge toutes les
+                    années bissextiles.
+
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container bg-dark py-2">
+        <div class="row bg-light py-5 justify-content-center">
+            <div class="col-10">
+                <div id="years">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        var idYears = document.getElementById("years")
+        var text = "";
+        var i;
+        for (i = 2020; i <= 2030; i++) {
+
+            if (i % 4 === 0) {
+                text += "<p style= color:red>" + i + " bissextile" + "</p>";
+
+            } else {
+                text += "<p>" + i + "</p>";
+            }
+        }
+        idYears.innerHTML = text;
+    </script>
+
+
+
+</body>
+
+</html>
