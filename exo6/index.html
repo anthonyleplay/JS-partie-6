@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>JS partie 6 exo 6</title>
+
+</head>
+
+
+<body class="bg-dark">
+    <div class="container bg-dark py-2">
+        <div class="row bg-light py-5 justify-content-center">
+            <div class="col-10">
+
+                <p class="h2">Partie 6 - Les boucles</p>
+
+                <p class="h4"> Exercice 6</p>
+                <p>
+
+                    Créer deux variables <b>firstNumber</b> et <b>secondNumber</b>. Leur donner une valeur comprise entre 1 et 10.
+                    Tant que le résultat de la division des deux nombres est supérieur à 1:
+                    <ul>
+                        <li>Afficher le résultat.</li>
+                        <li>Assigner le résultat à <b>firstNumber</b></li>
+
+
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container bg-dark py-2">
+        <div class="row bg-light py-5 justify-content-center">
+            <div class="col-10">
+
+
+                <button type="button" id="mybutton">nombre1 / nombre2</button>
+
+                <div id="list"></div>
+
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        let idList = document.getElementById("list");
+        let firstNumber = 10;
+        let secondNumber = 2;
+        let n = 2;
+        let idButton = document.getElementById("mybutton");
+        idButton.addEventListener("click", myFunction);
+
+        function myFunction() {
+            while (n > 1) {
+                n = firstNumber / secondNumber;
+                let myP = document.createElement("p");
+                myP.innerHTML = firstNumber;
+                idList.appendChild(myP);
+                firstNumber = n;
+             
+            }
+        }
+    </script>
+
+
+
+</body>
+
+</html>

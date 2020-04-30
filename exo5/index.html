@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>JS partie 6 exo 5</title>
+
+</head>
+
+
+<body class="bg-dark">
+    <div class="container bg-dark py-2">
+        <div class="row bg-light py-5 justify-content-center">
+            <div class="col-10">
+
+                <p class="h2">Partie 6 - Les boucles</p>
+
+                <p class="h4"> Exercice 5</p>
+                <p>
+
+                    Créer deux variables <b>firstNumber</b> et <b>secondNumber</b>. Leur donner une valeur comprise
+                    entre 1 et 10.
+                    Tant que le résultat de la multiplication des deux nombres est inférieur à 250:
+                    <ul>
+                        <li>Afficher le résultat.</li>
+                        <li>Assigner le résultat à <b>secondNumber</b></li>
+
+
+                    </ul>
+
+
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container bg-dark py-2">
+        <div class="row bg-light py-5 justify-content-center">
+            <div class="col-10">
+
+
+                <button type="button" id="mybutton">nombre1 X nombre2</button>
+
+                <div id="list"></div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        let idList = document.getElementById("list");
+        let firstNumber = 2;
+        let secondNumber = 2;
+        let n = 0;
+        let idButton = document.getElementById("mybutton");
+        idButton.addEventListener("click", myFunction);
+
+        function myFunction() {
+            while (n < 250) {
+                n = firstNumber * secondNumber;
+                let myP = document.createElement("p");
+                myP.innerHTML = secondNumber;
+                idList.appendChild(myP);
+                secondNumber = n;
+                if (firstNumber==1){
+                    break;
+                }
+            }
+        }
+    </script>
+
+
+
+</body>
+
+</html>

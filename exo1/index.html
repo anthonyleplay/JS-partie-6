@@ -49,7 +49,7 @@
         var i;
         for (i = 2020; i <= 2030; i++) {
 
-            if (i % 4 === 0) {
+            if ((i%4==0) && ((i%100!=0) || (i%400==0))) {
                 text += "<p style= color:red>" + i + " bissextile" + "</p>";
 
             } else {

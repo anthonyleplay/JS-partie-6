@@ -2,11 +2,27 @@ let languages = ['html', 'css', 'javascript', 'php', 'mysql', 'c++', 'ruby', 'py
 
 let idList = document.getElementById("list");
 
-var text = "";
-var i;
-for (i = 0; i < languages.length; i++) {
 
-    text += i+1 + " : " + languages[i] + "<br>";
+languages.forEach(myFunction);
 
+function myFunction(item, index) {
+    let myP = document.createElement("P");
+    myP.innerText = index + ": " + item ; 
+    idList.appendChild(myP);
 }
-idList.innerHTML = text;
+
+
+
+
+
+
+
+
+// var text = "";
+// var i;
+// for (i = 0; i < languages.length; i++) {
+
+//     text += i+1 + " : " + languages[i] + "<br>";
+
+// }
+// idList.innerHTML = text;

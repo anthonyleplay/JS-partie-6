@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partie 6 Exercice 2</title>
+</head>
+
+<body>
+    <h1>Exercice 2</h1>
+    <p>A l'aide d'une boucle afficher tous les nombre de 0 à 100. Pour chaque multiples de 15, les remplacer par '...
+    </p>
+    <button type="button" id="myButton">Generate</button>
+    <ul id='myNumber'></ul>
+</body>
+<script>
+    myButton.addEventListener('click', function () {
+        for (i = 0; i <= 100; i++) {
+            let myP = document.createElement('li');
+            if (i % 15 == 0) {
+                myP.innerText = '...';
+            } else {
+                myP.innerText = i;
+            }
+            myNumber.appendChild(myP);
+        }
+    })
+
+    // let text = '';
+    // let i;
+
+    // for (i = 0; i <= 100; i++) {
+
+    //     if ((i % 15 == 0)) {
+    //         text += '...<br>';
+
+    //     } else {
+    //         text += i + '<br>';
+
+
+    //     }
+
+    //     document.getElementById('myNumber').innerHTML = text;
+
+    // }
+</script>
+
+</html>
